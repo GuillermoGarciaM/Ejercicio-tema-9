@@ -1,0 +1,68 @@
+package ejercicio;
+
+public class Ejercicio_9 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Cliente cliente=new Cliente();
+		cliente.setEdad(20);
+		cliente.setNombre("Raul");
+		cliente.setTelefono(5555);
+		cliente.setCredito(1000);
+		System.out.println("El nombre del cliente es " + cliente.getNombre() + " su edad es " + cliente.getEdad() + 
+				" años, su numero de telefono es " + cliente.getTelefono() + " y tiene un credito de $" + cliente.getCredito());
+		Trabajador trabajador=new Trabajador();
+		trabajador.setEdad(22);
+		trabajador.setNombre("Juan");
+		trabajador.setTelefono(3333);
+		trabajador.setSalario(3500);
+		System.out.println("El nombre del trabajador es " + trabajador.getNombre() + " tiene una edad de " + trabajador.getEdad() +
+				" años, su numero telefonico es " + trabajador.getTelefono() + " y su salario es de $" + trabajador.getSalario());
+	}
+
+}
+class persona{
+	private int edad;
+	private String nombre;
+	private int telefono;
+	
+	public void setEdad(int edad) {
+		this.edad=edad;
+	}
+	public int getEdad(){
+		return edad;
+	}
+	public void setNombre(String nombre) {
+		this.nombre=nombre;
+	}
+	public String getNombre(){
+		return nombre;
+	}
+	public void setTelefono(int telefono) {
+		this.telefono=telefono;
+	}
+	public int getTelefono(){
+		return telefono;
+	}
+}
+
+
+class Cliente extends persona{
+	int credito;
+	public void setCredito(int credito) {
+		this.credito=credito;
+	}
+	public int getCredito(){
+		return credito;
+	}
+	
+}
+
+class Trabajador extends persona{
+	int salario;
+	public void setSalario(int salario){
+		this.salario=salario;
+	}
+	public int getSalario(){
+		return salario;
+	}
